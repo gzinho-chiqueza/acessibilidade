@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
 
 :root {
-    --laranja-claro: #FF862A;
+    --cor-primaria: #5A189A;
+    --cor-secundaria: #9D4EDD;
     --alto-contraste-fundo: #000000;
     --alto-contraste-texto: #ffffff;
     --alto-contraste-link: #ffd700;
@@ -10,28 +11,26 @@
 
 body {
     font-size: 1rem;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
 }
 
 header {
     background-color: #ffffff;
 }
 
-
 section {
     padding-bottom: 5rem;
 }
 
-
 .nav-link {
-    color: #CB6D43;
+    color: var(--cor-secundaria);
     font-weight: 600;
 }
 
 .inicio-fundo {
-    /* aula 3 */
-    background-image: url('img/4965007.jpg');
-    /* Substitua pelo caminho da sua imagem */
+    background-image: url('img/fundo-giratina.jpg'); /* Use uma imagem que remeta ao Mundo Reverso */
     background-size: cover;
     background-position: right;
     border-radius: 80px;
@@ -39,9 +38,9 @@ section {
     height: 606px;
     padding: 40px;
     margin: 0 auto;
+    position: relative;
 }
 
-/* posicionamento para a imagem à direita */
 .img-inicio {
     position: absolute;
     right: 0;
@@ -50,7 +49,6 @@ section {
     height: auto;
 }
 
-
 .esquerda-conteudo {
     display: flex;
     flex-direction: column;
@@ -58,143 +56,114 @@ section {
     gap: 1rem;
 }
 
-
 .botao-inicio {
-    background-color: var(--laranja-claro);
+    background-color: var(--cor-primaria);
     border-radius: 30px;
     border: none;
     width: 14em;
     height: 3em;
-    align-content: center;
-
+    color: white;
+    font-weight: bold;
 }
 
 .display-4 {
-    text-shadow: -5px 5px var(--laranja-claro);
+    text-shadow: -5px 5px var(--cor-secundaria);
+    color: white;
 }
-
-
-#tropicalia {
-    position: relative;
-    padding-top: 5rem;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    background: url('img/flor.png') top right no-repeat,
-        url('img/flor-esquerda.png') bottom left no-repeat;
-    background-size: 180px 180px;
-    /* Ajuste o tamanho conforme necessário */
-}
-
-#tropicalia .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    z-index: 1;
-    /* Garante que o conteúdo fica acima das imagens do background */
-}
-
 
 h2 {
-    font-family: 'Lemon', serif;
+    font-family: 'Cinzel', serif;
     font-size: 2.5em;
     font-style: normal;
-    color: var(--laranja-claro);
+    color: var(--cor-primaria);
 }
 
 #galeria {
-    background-color: #FAF4F4;
-
+    background-color: #f1edf0;
 }
 
 .fundo-galeria {
-    background: url('img/flor-bottom-direita.png') bottom right no-repeat;
     background-size: 180px 180px;
 }
 
 #contato {
-    background-image: url('img/4965007.jpg');
+    background-image: url('img/fundo-giratina.jpg');
     background-size: cover;
     padding: 4rem 0;
-    /* Espaçamento interno para a seção de contato */
-
 }
 
 .formulario {
     background-color: #ffffff;
     padding: 2rem;
-    /* Espaçamento interno dentro do formulário */
     border-radius: 10px;
-    /* Borda arredondada para o formulário */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    /* Sombra suave para destacar o formulário */
     font-weight: bold;
 }
 
 .formulario button {
-    background-color: #CB6D43;
+    background-color: var(--cor-primaria);
     border: none;
     font-weight: bold;
+    color: white;
 }
 
 .form-control {
     background-color: #F1EDEF;
 }
-.menu-acessibilidade{
+
+.menu-acessibilidade {
     position: fixed;
-    top:2rem;
-    right:20px;
+    top: 2rem;
+    right: 20px;
     z-index: 1000;
 }
 
-.rotacao-botao{
+.rotacao-botao {
     transform: rotate(-90deg);
     transform-origin: right center;
 }
 
-.opcoes-acessibilidade{
-    margin-top:10px;
+.opcoes-acessibilidade {
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
 }
 
-.opcoes-acessibilidade button{
+.opcoes-acessibilidade button {
     margin-bottom: 5px;
 }
-.apresenta-lista{
+
+.apresenta-lista {
     display: none;
 }
 
-.alto-contraste{
+.alto-contraste {
     background-color: var(--alto-contraste-fundo);
     color: var(--alto-contraste-texto);
 }
 
 .alto-contraste header,
 .alto-contraste footer,
-.alto-contraste .formulario{
+.alto-contraste .formulario {
     background-color: var(--alto-contraste-fundo);
     color: var(--alto-contraste-texto);
 }
 
-.alto-contraste .nav-link{
+.alto-contraste .nav-link {
     color: var(--alto-contraste-link);
 }
 
 .alto-contraste .botao-inicio,
 .alto-contraste .formulario button,
-.alto-contraste .btn-primary{
+.alto-contraste .btn-primary {
     background-color: var(--alto-contraste-link);
-    color: var(--alto-contraste-fundo)
-}
-
-.alto-contraste #tropicalia {
-    background: none;
+    color: var(--alto-contraste-fundo);
 }
 
 .alto-contraste #galeria {
     background-color: var(--alto-contraste-fundo);
 }
+
 .alto-contraste .fundo-galeria {
     background: none;
 }
